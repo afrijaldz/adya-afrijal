@@ -17,7 +17,7 @@ const opened = ref<boolean>(false)
         :variants="{ custom: { scale: 2 } }"
         :delay="300"
       >
-        <div class="text-primary-dark">JFEFEF</div>
+        <div class="text-primary-dark font-head">JFEFEF</div>
       </div>
     </BaseLayout>
   </template>

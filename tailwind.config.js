@@ -6,6 +6,10 @@ export default {
       colors: {
         primary: '#f9f5ea',
         'primary-dark': '#1c1708'
+      },
+      fontFamily: {
+        'head': ['Courgette'],
+        'sub-head': ['Playpen Sans']
       }
     }
   },
