@@ -8,8 +8,10 @@ export default {
         'primary-dark': '#1c1708'
       },
       fontFamily: {
-        'head': ['Courgette'],
-        'sub-head': ['Playpen Sans']
+        head: ['Courgette'],
+        'sub-head': ['Playpen Sans'],
+        content: ['Josefin Sans'],
+        play: ['Playball']
       }
     }
   },

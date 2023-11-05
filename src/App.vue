@@ -3,6 +3,9 @@ import { ref } from 'vue'
 
 import Cover from './components/Cover.vue'
 import BaseLayout from './components/BaseLayout.vue'
+import ScreenOne from './components/ScreenOne.vue'
+import ScreenTwo from './components/ScreenTwo.vue'
+import ScreenThree from './components/ScreenThree.vue'
 
 const opened = ref<boolean>(false)
 </script>
@@ -17,7 +20,9 @@ const opened = ref<boolean>(false)
         :variants="{ custom: { scale: 2 } }"
         :delay="300"
       >
-        <div class="text-primary-dark font-head">JFEFEF</div>
+        <ScreenOne />
+        <ScreenTwo />
+        <ScreenThree />
       </div>
     </BaseLayout>
   </template>
