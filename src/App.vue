@@ -6,6 +6,7 @@ import BaseLayout from './components/BaseLayout.vue'
 import ScreenOne from './components/ScreenOne.vue'
 import ScreenTwo from './components/ScreenTwo.vue'
 import ScreenThree from './components/ScreenThree.vue'
+import ScreenFour from './components/ScreenFour.vue'
 
 const opened = ref<boolean>(false)
 </script>
@@ -20,9 +21,12 @@ const opened = ref<boolean>(false)
         :variants="{ custom: { scale: 2 } }"
         :delay="300"
       >
-        <ScreenOne />
-        <ScreenTwo />
-        <ScreenThree />
+        <div class="snap-y snap-mandatory scroll-smooth">
+          <ScreenOne />
+          <ScreenTwo />
+          <ScreenThree />
+          <ScreenFour />
+        </div>
       </div>
     </BaseLayout>
   </template>
