@@ -8,7 +8,7 @@ const emits = defineEmits<{
 <template>
   <BaseLayout>
     <div
-      class="w-full h-screen max-h-[32rem] relative overflow-hidden block z-10 max-w-md before:content-[''] before:absolute before:bottom-[-10] before:inset-0 before:block before:bg-black before:opacity-50 before:z-[-5] bg-[url('/src/assets/head3.webp')] min-h-screen bg-no-repeat bg-cover bg-center"
+      class="w-full h-screen max-h-[32rem] relative overflow-hidden block z-10 max-w-md before:content-[''] before:absolute before:bottom-[-10] before:inset-0 before:block before:bg-[#2a231e] before:opacity-50 before:z-[-5] bg-[url('/src/assets/head3.webp')] min-h-screen bg-no-repeat bg-cover bg-center"
     >
       <div class="font-content text-white text-center mt-44 text-lg">
         Hello, we are getting married
@@ -16,7 +16,7 @@ const emits = defineEmits<{
       <!-- <div class="font-content text-white text-center mt-2">18 November 2023</div> -->
       <div class="font-head text-5xl text-white text-center mt-6">Adya & Afrijal</div>
       <div
-        class="absolute bottom-10 w-full"
+        class="absolute bottom-16 w-full"
         v-motion
         :initial="{
           y: 20,

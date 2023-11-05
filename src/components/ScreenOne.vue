@@ -2,7 +2,7 @@
 
 <template>
   <div
-    class="bg-cover min-h-screen relative bg-[url('/src/assets/cccc.webp')] before:content-[''] before:absolute before:inset-0 before:block before:bg-gradient-to-t from-black from-15% before:opacity-100 before:z-[] w-full"
+    class="bg-cover min-h-screen relative bg-[url('/src/assets/cccc.webp')] bg-center bg-no-repeat before:content-[''] before:absolute before:inset-0 before:block before:bg-gradient-to-t from-[#2a231e] from-15% via-transparent before:opacity-100 before:z-[] w-full"
   >
     <div class="absolute bottom-[calc(10vh)] text-center font-head text-[#f9f5ea] w-full">
       <div class="text-3xl">Adya & Afrijal</div>

@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div class="bg-[#fff] min-h-screen text-white">
+  <div class="bg-[#fff] min-h-screen text-white bg-[url('/src/assets/bg-u.png')]">
     <div class="pt-24">
       <div class="mx-auto">
         <img
@@ -29,7 +29,7 @@
           Adya Restina Prameswari
         </div>
         <div class="text-[#A38F7C] font-semibold font-content text-center mt-2">
-          Putra pertama dari
+          Putri kedua dari
         </div>
         <div class="text-center text-[#A38F7C] font-content font-light text-sm mt-2">
           <div>Bapak Sofian Saleh &</div>
