@@ -21,7 +21,7 @@ const opened = ref<boolean>(false)
         :variants="{ custom: { scale: 2 } }"
         :delay="300"
       >
-        <div class="snap-y snap-mandatory scroll-smooth">
+        <div class="snap-y snap-mandatory min-h-screen overflow-y-auto">
           <ScreenOne />
           <ScreenTwo />
           <ScreenThree />
