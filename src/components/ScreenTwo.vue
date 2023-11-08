@@ -38,7 +38,7 @@
         di antaramu rasa kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat
         tanda-tanda (kebesaran Allah) bagi kaum yang berpikir.
       </div>
-      <div class="mt-8">— بِـسْــــــــــمِ الله الرَّحْمٰنِ الرَّحِتْمِ</div>
+      <div class="mt-16">— بِـسْــــــــــمِ الله الرَّحْمٰنِ الرَّحِتْمِ</div>
       <div class="mt-8">
         Assalamu'alaikum warahmatullahi wabarakatuh Dengan memohon rahmat dan ridho Allah SWT, kami
         mohon do'a restu Bapak/Ibu/Saudara/i dalam rangka melangsungkan acara pernikahan kami
