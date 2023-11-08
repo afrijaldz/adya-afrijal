@@ -3,7 +3,7 @@
 <template>
   <div class="bg-white">
     <div class="pt-12 px-6">
-      <div class="mx-auto font-content text-center border border-[#a98b71] text-[#a98b71] p-6">
+      <div class="mx-auto font-content text-center border border-[#a98b71] text-[#a98b71] p-5">
         <div class="text-2xl">Akad Nikah</div>
         <div class="mt-3">
           <div class="font-medium">Sabtu, 18 November 2023</div>

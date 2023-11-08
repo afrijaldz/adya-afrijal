@@ -1,8 +1,15 @@
 <script setup lang="ts">
 import BaseLayout from './BaseLayout.vue'
+import {useInviteeStore } from '../stores/invitee'
+import { computed } from 'vue';
 const emits = defineEmits<{
   (event: 'open'): void
 }>()
+
+
+const inviteeStore = useInviteeStore()
+
+const identity = computed(() => inviteeStore.identity)
 </script>
 
 <template>
@@ -42,13 +49,20 @@ const emits = defineEmits<{
         }"
         :delay="500"
       >
+      <template v-if="identity">
         <div class="text-white text-center mb-4 font-content">
           <div class="text-md">teruntuk,</div>
-          <div class="text-lg">Mas Rudy</div>
+          <div class="text-lg">{{identity?.name}}</div>
         </div>
         <div class="px-3 py-1 mx-auto rounded-full bg-white w-fit text-center">
           <button @click="emits('open')" class="text-black font-content">Buka Undangan</button>
         </div>
+      </template>
+      <template v-else>
+        <div class="text-white text-center mb-4 font-content">
+          <div class="text-md">Mohon do'a restu</div>
+        </div>
+      </template>
       </div>
     </div>
   </BaseLayout>
