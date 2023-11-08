@@ -1,4 +1,31 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+
+import { useIntervalFn } from '@vueuse/core'
+import { ref } from 'vue'
+
+const days = ref()
+const hours = ref()
+const minutes = ref()
+const seconds = ref()
+
+const distance = ref(0)
+
+const { pause, resume, isActive } = useIntervalFn(() => {
+  const countDownDate = new Date('Nov 18, 2023 09:00:00').getTime()
+  const now = new Date().getTime()
+
+  distance.value = countDownDate - now
+
+  if (distance.value > 0) {
+    days.value = Math.floor(distance.value / (1000 * 60 * 60 * 24))
+    hours.value = Math.floor((distance.value % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
+    minutes.value = Math.floor((distance.value % (1000 * 60 * 60)) / (1000 * 60))
+    seconds.value = Math.floor((distance.value % (1000 * 60)) / 1000)
+  }
+
+}, 1000)
+
+</script>
 
 <template>
   <div class="snap-start">
@@ -17,15 +44,12 @@
             y: 0,
             opacity: 1
           }"
-          :delay="500"
+          :delay="600"
         >
           <div class="text-3xl">Adya & Afrijal</div>
-          <div class="mt-4 font-content">Sabtu, 18 November 2023</div>
+          <div class="mt-4 font-content" v-if="distance > 0">{{ days }} hari {{ hours }} jam {{ minutes }} menit {{ seconds }} detik</div>
         </div>
       </div>
-      <!-- <div class="custom-shape-divider-bottom">
-        <img src="https://valengina.datengdong.com/themes/spacemagenta/images/mask.png" alt="mask" />
-      </div> -->
     </div>
   </div>
 </template>

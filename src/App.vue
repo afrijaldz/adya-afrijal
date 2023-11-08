@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onMounted, ref } from 'vue'
+import { onMounted, ref, watch } from 'vue'
 // import { useMediaControls } from '@vueuse/core'
 import { useSound } from '@vueuse/sound'
 
@@ -17,11 +17,13 @@ const opened = ref<boolean>(false)
 
 const { play, pause, isPlaying } = useSound(trumpetSfx, { volume: 0.5 })
 
-onMounted(() => {
-  setTimeout(() => {
+
+watch(opened, (value) => {
+  if (value) {
     play()
-  }, 100)
+  }
 })
+
 </script>
 
 <template>

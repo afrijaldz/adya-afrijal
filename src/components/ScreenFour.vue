@@ -1,35 +1,40 @@
-<script setup lang="ts">
-import { useInterval } from '@vueuse/core'
-
-import { useIntervalFn } from '@vueuse/core'
-import { ref } from 'vue'
-
-const days = ref()
-const hours = ref()
-const minutes = ref()
-const seconds = ref()
-
-const { pause, resume, isActive } = useIntervalFn(() => {
-  const countDownDate = new Date('Nov 18, 2023 09:00:00').getTime()
-  const now = new Date().getTime()
-
-  const distance = countDownDate - now
-
-  days.value = Math.floor(distance / (1000 * 60 * 60 * 24))
-  hours.value = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
-  minutes.value = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))
-  seconds.value = Math.floor((distance % (1000 * 60)) / 1000)
-}, 1000)
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <div class="bg-white">
     <div class="pt-12 px-6">
-      <div class="mx-auto font-content text-2xl text-center text-[#a98b71]">
-        Acara akan diselenggarakan dalam
+      <div class="mx-auto font-content text-center border border-[#a98b71] text-[#a98b71] p-6">
+        <div class="text-2xl">Akad Nikah</div>
+        <div class="mt-3">
+          <div class="font-medium">Sabtu, 18 November 2023</div>
+          <div class="font-normal">09:00 - Selesai</div>
+          <div>Rumah Mempelai Wanita</div>
+          <div class="flex justify-normal items-center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"
+              />
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"
+              />
+            </svg>
+            Pencil, RT 3 RW 3, Wuryorejo, Wonogiri
+          </div>
+        </div>
       </div>
       <div class="mt-4 flex justify-evenly items-center text-center">
-        <div class="bg-[#a98b71] rounded py-2 px-5 text-[#333333]">
+        <!-- <div class="bg-[#a98b71] rounded py-2 px-5 text-[#333333]">
           <div>
             {{ days }}
           </div>
@@ -46,7 +51,7 @@ const { pause, resume, isActive } = useIntervalFn(() => {
             {{ minutes }}
           </div>
           <div>Menit</div>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>

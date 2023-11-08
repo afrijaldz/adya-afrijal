@@ -6,9 +6,9 @@ const openMap = () => {
 
 <template>
   <div class="bg-white">
-    <div class="pt-12 pb-32">
-      <div class="mx-auto font-content text-2xl text-center text-[#a98b71]">Berlokasi di</div>
-      <div class="mt-4 flex justify-evenly items-center text-center">
+    <div class="">
+      <!-- <div class="mx-auto font-content text-2xl text-center text-[#a98b71]">Berlokasi di</div> -->
+      <div class="pt-4 flex justify-evenly items-center text-center">
         <div class="p-2">
           <iframe
             src="https://www.google.com/maps?q=-7.833164, 110.917036&z=15&output=embed"
@@ -21,10 +21,12 @@ const openMap = () => {
         </div>
       </div>
       <div
-        class="text-center mt-3 text-[#a98b71] cursor-pointer hover:underline font-content"
-        @click="openMap"
+        class="text-center mt-1 pb-12 text-[#a98b71]  font-content"
+        
       >
+      <span class="cursor-pointer hover:underline" @click="openMap">
         Buka di google maps
+      </span>
       </div>
     </div>
   </div>

@@ -25,10 +25,10 @@
         <div class="text-[#a98b71] text-2xl font-semibold font-play text-center mt-2">
           Afrijal Dzuhri
         </div>
-        <div class="text-[#A38F7C] font-semibold font-content text-center mt-2">
+        <div class="text-[#A38F7C] font-content text-center mt-2">
           Putra pertama dari
         </div>
-        <div class="text-center text-[#A38F7C] font-content font-light text-sm mt-2">
+        <div class="text-center text-[#A38F7C] font-content font-semibold mt-2">
           <div>Bapak Sujarwadi &</div>
           <div>Ibu Tumpuk Sari</div>
         </div>
@@ -54,10 +54,10 @@
         <div class="text-[#a98b71] text-2xl font-semibold font-play text-center mt-2">
           Adya Restina Prameswari
         </div>
-        <div class="text-[#A38F7C] font-semibold font-content text-center mt-2">
+        <div class="text-[#A38F7C] font-content text-center mt-2">
           Putri kedua dari
         </div>
-        <div class="text-center text-[#A38F7C] font-content font-light text-sm mt-2">
+        <div class="text-center text-[#A38F7C] font-content font-semibold mt-2">
           <div>Bapak Sofian Saleh &</div>
           <div>Ibu Suwarni</div>
         </div>
