@@ -28,7 +28,7 @@ const { pause, resume, isActive } = useIntervalFn(() => {
       <div class="mx-auto font-content text-2xl text-center text-[#a98b71]">
         Acara akan diselenggarakan dalam
       </div>
-      <div class="mt-12 flex justify-evenly items-center text-center">
+      <div class="mt-4 flex justify-evenly items-center text-center">
         <div class="bg-[#a98b71] rounded py-2 px-5 text-[#333333]">
           <div>
             {{ days }}

@@ -10,7 +10,7 @@
       ></path>
     </svg>
     <div
-      class="px-6 py-24 text-[#a98b71] font-content text-center"
+      class="px-6 mt-24 text-[#a98b71] font-content text-center"
       v-motion
       :initial="{
         y: 20,

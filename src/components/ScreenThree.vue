@@ -1,8 +1,8 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div class="bg-[#fff] snap-start min-h-screen text-white bg-[url('/src/assets/bg-u.png')]">
-    <div class="pt-24">
+  <div class="bg-[#fff] snap-start  text-white bg-[url('/src/assets/bg-u.png')]">
+    <div class="py-24">
       <div
         class="mx-auto"
         v-motion

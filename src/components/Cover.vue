@@ -42,10 +42,10 @@ const emits = defineEmits<{
         }"
         :delay="500"
       >
-        <!-- <div class="text-white text-center mb-4 font-content">
+        <div class="text-white text-center mb-4 font-content">
           <div class="text-md">teruntuk,</div>
-          <div class="mt-1">Mas Rudy</div>
-        </div> -->
+          <div class="text-lg">Mas Rudy</div>
+        </div>
         <div class="px-3 py-1 mx-auto rounded-full bg-white w-fit text-center">
           <button @click="emits('open')" class="text-black font-content">Buka Undangan</button>
         </div>
