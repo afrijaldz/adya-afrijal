@@ -24,9 +24,9 @@ const { pause, resume, isActive } = useIntervalFn(() => {
 
 <template>
   <div class="bg-white">
-    <div class="pt-12 px-6 pb-32">
-      <div class="mx-auto font-content text-4xl text-center text-[#a98b71]">
-        Acara akan diselenggarakan
+    <div class="pt-12 px-6">
+      <div class="mx-auto font-content text-2xl text-center text-[#a98b71]">
+        Acara akan diselenggarakan dalam
       </div>
       <div class="mt-12 flex justify-evenly items-center text-center">
         <div class="bg-[#a98b71] rounded py-2 px-5 text-[#333333]">

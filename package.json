@@ -14,6 +14,7 @@
   "dependencies": {
     "@vueuse/core": "^10.5.0",
     "@vueuse/motion": "^2.0.0",
+    "@vueuse/sound": "^2.0.1",
     "vue": "^3.3.4"
   },
   "devDependencies": {

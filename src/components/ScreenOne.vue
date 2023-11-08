@@ -20,7 +20,7 @@
           :delay="500"
         >
           <div class="text-3xl">Adya & Afrijal</div>
-          <div class="mt-4 font-content">18 November 2023</div>
+          <div class="mt-4 font-content">Sabtu, 18 November 2023</div>
         </div>
       </div>
       <!-- <div class="custom-shape-divider-bottom">
