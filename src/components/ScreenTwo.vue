@@ -23,7 +23,10 @@
       }"
       :delay="300"
     >
-      <div>QS. Ar-Rum Ayat 21</div>
+      <div class="font-bold text-2xl font-content">
+        "Tiada ibadah yang elok selain pernikahan, yang dapat menyatukan dua insan dalam cinta-Nya.""
+      </div>
+      <div class="mt-10">QS. Ar-Rum Ayat 21</div>
       <div class="mt-8">
         وَمِنْ اٰيٰتِهٖٓ اَنْ خَلَقَ لَكُمْ مِّنْ اَنْفُسِكُمْ اَزْوَاجًا لِّتَسْكُنُوْٓا اِلَيْهَا
         وَجَعَلَ بَيْنَكُمْ مَّوَدَّةً وَّرَحْمَةً ۗاِنَّ فِيْ ذٰلِكَ لَاٰيٰتٍ لِّقَوْمٍ
