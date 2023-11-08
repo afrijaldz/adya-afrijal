@@ -15,7 +15,7 @@ import trumpetSfx from './assets/Justin Bieber - Lifetime.mp3'
 
 const opened = ref<boolean>(false)
 
-const { play, pause, isPlaying } = useSound(trumpetSfx, { volume: 0.2 })
+const { play, pause, isPlaying } = useSound(trumpetSfx, { volume: 0.5 })
 
 onMounted(() => {
   setTimeout(() => {
