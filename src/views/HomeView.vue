@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onMounted, ref, watch } from 'vue'
+import { computed, onMounted, ref, watch } from 'vue'
 // import { useMediaControls } from '@vueuse/core'
 import { useSound } from '@vueuse/sound'
 
@@ -12,18 +12,19 @@ import ScreenFour from '../components/ScreenFour.vue'
 import ScreenFive from '../components/ScreenFive.vue'
 import ScreenSix from '../components/ScreenSix.vue'
 import trumpetSfx from '../assets/Justin Bieber - Lifetime.mp3'
-import { useRoute } from 'vue-router'
+import { useRoute, useRouter } from 'vue-router'
 import { useFetch } from '@vueuse/core'
-import {useInviteeStore } from '../stores/invitee'
+import { useInviteeStore } from '../stores/invitee'
 
 const inviteeStore = useInviteeStore()
 
-const opened = ref<boolean>(false)
+const opened = computed(() => inviteeStore.opened)
 const valid = ref<boolean>()
 
 const { play, pause, isPlaying } = useSound(trumpetSfx, { volume: 0.5 })
 
 const route = useRoute()
+const router = useRouter()
 
 onMounted(() => {
   checkUser()
@@ -35,28 +36,26 @@ const checkUser = async () => {
   } else {
     valid.value = true
 
-    const { data } = await useFetch('https://api-a2.jlab.my.id/hash/'+route.params.id).get().json()
+    const { data } = await useFetch('https://api-a2.jlab.my.id/hash/' + route.params.id)
+      .get()
+      .json()
 
-  if (data.value) {
-    if (data.value.data) {
-      console.log('amasuafsljk')
-      inviteeStore.identity = data.value.data
-    } else {
-      valid.value = false
+    if (data.value) {
+      if (data.value.data) {
+        inviteeStore.identity = data.value.data
+      } else {
+        valid.value = false
+        router.push('/')
+      }
     }
   }
-
-
-  }
 }
-
 
 watch(opened, (value) => {
   if (value) {
     play()
   }
 })
-
 </script>
 
 <template>
@@ -131,7 +130,7 @@ watch(opened, (value) => {
     </BaseLayout>
   </template>
   <template v-else>
-    <Cover @open="opened = true" />
+    <Cover @open="inviteeStore.opened = true" />
   </template>
 </template>
 

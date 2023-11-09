@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
 import { useClipboard } from '@vueuse/core'
-import { useInviteeStore } from '../stores/invitee';
+import { useInviteeStore } from '../stores/invitee'
 
 const inviteeStore = useInviteeStore()
 
@@ -14,8 +14,16 @@ const openMap = () => {
 const btc = ref('1FFfXrrmqUvUryZ9K8RDACQSX9ak2ZJT1b')
 const eth = ref('0x1f3D416D808474872880b5eb070BA4b98Abd2b9A')
 
-const { copy: copyBtc, copied: btcCopied, isSupported: isBtcSupported} = useClipboard({ source: btc })
-const { copy: copyEth, copied: ethCopied, isSupported: isEthSupported} = useClipboard({ source: eth })
+const {
+  copy: copyBtc,
+  copied: btcCopied,
+  isSupported: isBtcSupported
+} = useClipboard({ source: btc })
+const {
+  copy: copyEth,
+  copied: ethCopied,
+  isSupported: isEthSupported
+} = useClipboard({ source: eth })
 </script>
 
 <template>
@@ -39,13 +47,14 @@ const { copy: copyEth, copied: ethCopied, isSupported: isEthSupported} = useClip
           Buka di google maps
         </span>
       </div>
-      <div v-if="identity.sumbangan === 'tidak'" class="py-6 text-center">
+      <div v-if="identity.sumbangan === 'tidak'" class="py-5 text-center">
         <div class="w-[60px] h-[3px] mx-auto bg-[#a98b71]"></div>
         <div class="text-[#a98b71] mt-10 font-content">Tanpa Mengurangi Rasa Hormat</div>
         <div class="mt-2 text-sm px-5 font-content">
-          Kami tidak menerima sumbangan dalam bentuk apapun kecuali do'a atau Bitcoin/Ethereum
+          Kami tidak menerima sumbangan dalam bentuk apapun kecuali do'a
+          <span v-if="identity.from === 'ijal'">atau Bitcoin/Ethereum</span>
         </div>
-        <div class="mx-auto mt-2">
+        <div class="mx-auto mt-2" v-if="identity.from === 'ijal'">
           <template v-if="isBtcSupported">
             <button
               class="px-2 py-1 bg-orange-400 rounded text-xs font-content"
@@ -68,6 +77,40 @@ const { copy: copyEth, copied: ethCopied, isSupported: isEthSupported} = useClip
             </button>
           </template>
         </div>
+      </div>
+      <div v-if="identity.sumbangan === 'ya'" class="py-6 text-center">
+        <div class="w-[60px] h-[3px] mx-auto bg-[#a98b71]"></div>
+        <div class="text-[#a98b71] text-2xl mt-10 font-content">Gift</div>
+        <div class="mt-2 text px-5 font-content">
+          Do'a restu keluarga, sahabat, serta rekan-rekan semua di pernikahan kami sudah sangat
+          cukup sebagai hadiah. Tetapi jika memberi merupakan tanda kasih, kami dengan senang hati
+          menerimanya dan tentunya semakin melengkapi kebahagiaan kami.
+        </div>
+        <!-- <div class="mx-auto mt-2" v-if="identity.from === 'adya'">
+          <div>Adya Restina</div>
+
+          <template v-if="isBtcSupported">
+            <button
+              class="px-2 py-1 bg-orange-400 rounded text-xs font-content"
+              @click="copyBtc(btc)"
+            >
+              <template v-if="!btcCopied">Copy addr BTC </template
+              ><template v-else> Copied!</template>
+            </button>
+          </template>
+
+          &nbsp;
+
+          <template v-if="isEthSupported">
+            <button
+              class="px-2 py-1 bg-blue-400 rounded text-xs font-content"
+              @click="copyEth(eth)"
+            >
+              <template v-if="!ethCopied">Copy addr ETH </template
+              ><template v-else> Copied!</template>
+            </button>
+          </template>
+        </div> -->
       </div>
     </div>
   </div>

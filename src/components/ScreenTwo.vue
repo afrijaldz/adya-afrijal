@@ -10,7 +10,7 @@
       ></path>
     </svg>
     <div
-      class="px-6 mt-24 text-[#a98b71] font-content text-center"
+      class="px-5 mt-24 text-[#a98b71] font-content text-center"
       v-motion
       :initial="{
         y: 20,
@@ -24,7 +24,8 @@
       :delay="300"
     >
       <div class="font-bold text-2xl font-content">
-        "Tiada ibadah yang elok selain pernikahan, yang dapat menyatukan dua insan dalam cinta-Nya.""
+        "Tiada ibadah yang elok selain pernikahan, yang dapat menyatukan dua insan dalam
+        cinta-Nya.""
       </div>
       <div class="mt-10">QS. Ar-Rum Ayat 21</div>
       <div class="mt-8">
